@@ -16,7 +16,6 @@
                     $steps = $this->db->get_where('phase',array('status'=>1))->result_array();
                     foreach($steps as $step):
                     $proceeding_in = $this->db->query('SELECT * FROM `proceeding_files` WHERE `proceeding_id` = '.$proceeding_id.' AND `phase_id` = '.$step['phase_id'].'  AND parent_id IS NULL ORDER BY `proceeding_files_id` ASC')->result_array();
-                    
                     if(count($proceeding_in) > 0):
                 ?>
                 <li class="folder-root open">

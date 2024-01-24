@@ -4,7 +4,7 @@
             <div class="media">
                 <div class="media-body align-self-center">
                     <a href="social-app.html">
-                        <h3 class="user-name2">Documentos</h3>
+                        <h3 class="user-name2">Documentoss</h3>
                     </a>
                 </div>
             </div>
@@ -31,15 +31,13 @@
                         ?>
                         <li>
                             <div class="files" style="display:flex;cursor:pointer">
-                                <b onclick="modalLgRequest('<?php echo base_url();?>modal/popup/modal_show_files_folder/<?php echo $row['folder_files_id'];?>');"><?php echo $row['name'];?></b>
+                                <b onclick="modalLgRequest('<?php echo base_url();?>modal/popup/modal_show_files/<?php echo $row['folder_files_id'];?>');"><?php echo $row['name'];?></b>
                                 <div class="file-actions" style="display:none;margin: 0px 15px 7px 15px;">
                                     <a style="font-size:20px" onclick="modalLgRequest('<?php echo base_url();?>modal/popup/modal_add_files_file/<?php echo $folder_id;?>/<?php echo $row['folder_files_id'];?>');" href="javascript:void(0)"><i class="fa fa-plus-circle"></i></a>
-                                    <a style="font-size:20px" onclick="modalLgRequest('<?php echo base_url();?>modal/popup/modal_show_files_folder/<?php echo $row['folder_files_id'];?>');" href="javascript:void(0)"><i class="fa fa-file-text"></i></a>
                                     <a style="font-size:20px" onclick="modalLgRequest('<?php echo base_url();?>modal/popup/modal_edit_files_folder/<?php echo $row['folder_files_id'];?>');" href="javascript:void(0)"><i class="fa fa-edit"></i></a>
                                     <a style="font-size:20px" onclick="deleteFile('<?php echo $row['folder_files_id'];?>');" href="javascript:void(0)"><i class="fa fa-trash"></i></a>
                                 </div>
                             </div>
-                            <?php echo $this->crud_model->hasfilesfolders($row['folder_files_id']);?>
                         </li>
                         <?php endforeach;?>
                     </ul>
